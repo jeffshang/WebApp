@@ -103,9 +103,7 @@ namespace AutoMapperDemo.Controllers
             };
         }
     }
-    /// <summary>
-    /// 
-    /// </summary>
+
     public class OrderModel
     {
         /// <summary>
