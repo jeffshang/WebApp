@@ -46,21 +46,22 @@ namespace AutoMapperDemo.Controllers
         [HttpGet("{orderCode}/{orderName}")]
         [ApiVersion("1.0", Deprecated = false)]
         [ApiExplorerSettings(IgnoreApi = true)]
-        public IActionResult QueryOrder(string orderCode, string orderName)
+        public OrderModel QueryOrder(string orderCode, string orderName)
         {
-            //OrderModel model = new OrderModel
-            //{
-
-            //    OrderCode = orderCode
-
-            //};
-            return Ok(new OrderModel
+            OrderModel model = new OrderModel
             {
 
-                OrderCode = orderCode,
-                OrderType = OrderTypeInfo.StoreEntry
+                OrderCode = orderCode
 
-            });
+            };
+            return model;
+            //return Ok(new OrderModel
+            //{
+
+            //    OrderCode = orderCode,
+            //    OrderType = OrderTypeInfo.StoreEntry
+
+            //});
         }
 
         [HttpGet("GetBy2Params")] // 前台请求的方法名，可以与函数名不同
